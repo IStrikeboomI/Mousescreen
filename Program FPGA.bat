@@ -1,0 +1,1 @@
+"C:\Gowin\Gowin_V1.9.12_x64\IDE\bin\gw_sh.exe" project.tlc && "C:\Gowin\Gowin_V1.9.12_x64\Programmer\bin\programmer_cli.exe" --device GW5A-25B --operation_index 2 --fsFile "C:\Users\makad\Documents\Projects\Verilog\Mousescreen\impl\pnr\mousescreen.fs
