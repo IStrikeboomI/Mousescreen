@@ -21,8 +21,8 @@ module mousescreen#(
     output wire gn,
     output wire bp,
     output wire bn,
-    input wire  clkp,
-    input wire  clkn,
+    output wire  clkp,
+    output wire  clkn,
 
     // For Additional LED PMOD
     output wire [15:0] led;
