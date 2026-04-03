@@ -1,9 +1,10 @@
 module hdmi(
     input wire clk,
     input wire rst,
-    input wire times5clk,
     input wire [7:0] r,g,b,
     input hSync, vSync, DrawArea,
+
+    input wire clk_TMDS,
 
     output wire rp,
     output wire rn,
@@ -11,35 +12,39 @@ module hdmi(
     output wire gn,
     output wire bp,
     output wire bn,
-    output wire  clkp,
-    output wire  clkn
+    output wire clkp,
+    output wire clkn
 );
-wire [9:0] TMDS_red, TMDS_green, TMDS_blue;
-TMDS_encoder encode_R(.clk(clk), .VD(r  ), .CD(2'b00)        , .VDE(DrawArea), .TMDS(TMDS_red));
-TMDS_encoder encode_G(.clk(clk), .VD(g), .CD(2'b00)        , .VDE(DrawArea), .TMDS(TMDS_green));
-TMDS_encoder encode_B(.clk(clk), .VD(b ), .CD({vSync,hSync}), .VDE(DrawArea), .TMDS(TMDS_blue));
 
-wire tmds_clk_bit;
-wire tmds_red_bit;
-OSER10 red_ser (
-    .Q(tmds_red_bit),
-    .D0(TMDS_red[0]),
-    .D1(TMDS_red[1]),
-    .D2(TMDS_red[2]),
-    .D3(TMDS_red[3]),
-    .D4(TMDS_red[4]),
-    .D5(TMDS_red[5]),
-    .D6(TMDS_red[6]),
-    .D7(TMDS_red[7]),
-    .D8(TMDS_red[8]),
-    .D9(TMDS_red[9]),
+wire [9:0] TMDS_r;
+wire [9:0] TMDS_g;
+wire [9:0] TMDS_b;
+
+svo_tmds encode_R(.clk(clk), .resetn(~rst),.din(r), .ctrl(2'b00)        , .de(DrawArea), .dout(TMDS_r));
+svo_tmds encode_G(.clk(clk), .resetn(~rst),.din(g), .ctrl(2'b00)        , .de(DrawArea), .dout(TMDS_g));
+svo_tmds encode_B(.clk(clk), .resetn(~rst),.din(b), .ctrl({vSync,hSync}), .de(DrawArea), .dout(TMDS_b));
+
+wire tmds_clk;
+wire [2:0] tmds_bit;
+OSER10 tmds_serdes [2:0] (
+    .Q(tmds_bit),
+    .D0({TMDS_b[0], TMDS_g[0], TMDS_r[0]}),
+    .D1({TMDS_b[1], TMDS_g[1], TMDS_r[1]}),
+    .D2({TMDS_b[2], TMDS_g[2], TMDS_r[2]}),
+    .D3({TMDS_b[3], TMDS_g[3], TMDS_r[3]}),
+    .D4({TMDS_b[4], TMDS_g[4], TMDS_r[4]}),
+    .D5({TMDS_b[5], TMDS_g[5], TMDS_r[5]}),
+    .D6({TMDS_b[6], TMDS_g[6], TMDS_r[6]}),
+    .D7({TMDS_b[7], TMDS_g[7], TMDS_r[7]}),
+    .D8({TMDS_b[8], TMDS_g[8], TMDS_r[8]}),
+    .D9({TMDS_b[9], TMDS_g[9], TMDS_r[9]}),
     .PCLK(clk),
-    .FCLCK(times5clk),
+    .FCLK(clk_TMDS),
     .RESET(rst)
-)
-TLVDS_OBUF tmds_clk_buf(
-    .I(clk),
-    .O(clkp),
-    .OB(clkn)
+);
+ELVDS_OBUF elvds [3:0] (
+    .I({clk,tmds_bit[2],tmds_bit[1],tmds_bit[0]}),
+    .O({clkp,bp,gp,rp}),
+    .OB({clkn,bn,gn,rn})
 );
 endmodule

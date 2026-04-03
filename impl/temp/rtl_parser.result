@@ -1,28 +1,88 @@
 [
  {
-  "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_pll/gowin_pll.v",
+  "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/mousescreen.v",
   "InstLine" : 1,
-  "InstName" : "Gowin_PLL",
-  "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_pll/gowin_pll.v",
+  "InstName" : "mousescreen",
+  "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/mousescreen.v",
   "ModuleLine" : 1,
-  "ModuleName" : "Gowin_PLL",
+  "ModuleName" : "mousescreen",
   "SubInsts" : [
    {
-    "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_pll/gowin_pll.v",
-    "InstLine" : 21,
-    "InstName" : "u_pll",
-    "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_pll/gowin_pll_mod.v",
-    "ModuleLine" : 10,
-    "ModuleName" : "Gowin_PLL_MOD"
+    "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/mousescreen.v",
+    "InstLine" : 32,
+    "InstName" : "pll_inst",
+    "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_pll/gowin_pll.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "Gowin_PLL",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_pll/gowin_pll.v",
+      "InstLine" : 22,
+      "InstName" : "u_pll",
+      "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_pll/gowin_pll_mod.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "Gowin_PLL_MOD"
+     },
+     {
+      "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_pll/gowin_pll.v",
+      "InstLine" : 35,
+      "InstName" : "u_pll_init",
+      "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/pll_init.v",
+      "ModuleLine" : 4,
+      "ModuleName" : "PLL_INIT"
+     }
+    ]
    },
    {
-    "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_pll/gowin_pll.v",
-    "InstLine" : 34,
-    "InstName" : "u_pll_init",
-    "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/pll_init.v",
-    "ModuleLine" : 4,
-    "ModuleName" : "PLL_INIT"
+    "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/mousescreen.v",
+    "InstLine" : 39,
+    "InstName" : "clk_div",
+    "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_clkdiv/gowin_clkdiv.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_CLKDIV"
+   },
+   {
+    "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/mousescreen.v",
+    "InstLine" : 74,
+    "InstName" : "hdmi_inst",
+    "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/hdmi.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "hdmi",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/hdmi.v",
+      "InstLine" : 23,
+      "InstName" : "encode_R",
+      "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/svo_tmds.v",
+      "ModuleLine" : 21,
+      "ModuleName" : "svo_tmds"
+     },
+     {
+      "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/hdmi.v",
+      "InstLine" : 24,
+      "InstName" : "encode_G",
+      "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/svo_tmds.v",
+      "ModuleLine" : 21,
+      "ModuleName" : "svo_tmds"
+     },
+     {
+      "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/hdmi.v",
+      "InstLine" : 25,
+      "InstName" : "encode_B",
+      "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/svo_tmds.v",
+      "ModuleLine" : 21,
+      "ModuleName" : "svo_tmds"
+     }
+    ]
    }
   ]
+ },
+ {
+  "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/tdms_encoder.v",
+  "InstLine" : 1,
+  "InstName" : "TMDS_encoder",
+  "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/tdms_encoder.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "TMDS_encoder"
  }
 ]

@@ -1,17 +1,27 @@
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file 'C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\mousescreen.v'
-Analyzing Verilog file 'C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\hdmi.v'
-Analyzing Verilog file 'C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\tdms_encoder.v'
-WARN  (EX2478) : Non-net output port 'TMDS' cannot be initialized at declaration in SystemVerilog mode("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\tdms_encoder.v":6)
+Analyzing Verilog file 'C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\gowin_clkdiv\gowin_clkdiv.v'
 Analyzing Verilog file 'C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\gowin_pll\gowin_pll.v'
 Analyzing Verilog file 'C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\gowin_pll\gowin_pll_mod.v'
+Analyzing Verilog file 'C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\hdmi.v'
+Analyzing Verilog file 'C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\mousescreen.v'
 Analyzing Verilog file 'C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\pll_init.v'
+Analyzing Verilog file 'C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\svo_tmds.v'
+Analyzing Verilog file 'C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\tdms_encoder.v'
+WARN  (EX2478) : Non-net output port 'TMDS' cannot be initialized at declaration in SystemVerilog mode("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\tdms_encoder.v":6)
+Compiling module 'mousescreen'("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\mousescreen.v":1)
 Compiling module 'Gowin_PLL'("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\gowin_pll\gowin_pll.v":1)
 Compiling module 'Gowin_PLL_MOD'("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\gowin_pll\gowin_pll_mod.v":10)
-Compiling module 'PLL_INIT(MULTI_FAC=16)'("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\pll_init.v":4)
-NOTE  (EX0101) : Current top module is "Gowin_PLL"
+Compiling module 'PLL_INIT(MULTI_FAC=37)'("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\pll_init.v":4)
+Compiling module 'Gowin_CLKDIV'("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\gowin_clkdiv\gowin_clkdiv.v":10)
+WARN  (EX3791) : Expression size 12 truncated to fit in target size 11("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\mousescreen.v":51)
+WARN  (EX3791) : Expression size 12 truncated to fit in target size 11("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\mousescreen.v":53)
+Compiling module 'hdmi'("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\hdmi.v":1)
+Compiling module 'svo_tmds'("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\svo_tmds.v":21)
+NOTE  (EX0101) : Current top module is "mousescreen"
 [5%] Running netlist conversion ...
+WARN  (CV0016) : Input rst is unused("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\mousescreen.v":5)
+WARN  (CV0016) : Input button_s2 is unused("C:\Users\makad\Documents\Projects\Verilog\MouseScreen\src\mousescreen.v":8)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed

@@ -2,15 +2,7 @@
  "Device" : "GW5A-25B",
  "Files" : [
   {
-   "Path" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/mousescreen.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/hdmi.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/tdms_encoder.v",
+   "Path" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_clkdiv/gowin_clkdiv.v",
    "Type" : "verilog"
   },
   {
@@ -22,7 +14,23 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/hdmi.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/mousescreen.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/pll_init.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/svo_tmds.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/tdms_encoder.v",
    "Type" : "verilog"
   }
  ],
@@ -31,7 +39,7 @@
  ],
  "LoopLimit" : 2000,
  "ResultFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/impl/temp/rtl_parser.result",
- "Top" : "",
+ "Top" : "mousescreen",
  "VerilogStd" : "sysv",
  "VhdlStd" : "vhdl_93"
 }
