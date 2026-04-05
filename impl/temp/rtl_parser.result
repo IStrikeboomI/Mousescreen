@@ -9,7 +9,7 @@
   "SubInsts" : [
    {
     "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/mousescreen.v",
-    "InstLine" : 32,
+    "InstLine" : 63,
     "InstName" : "pll_inst",
     "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_pll/gowin_pll.v",
     "ModuleLine" : 1,
@@ -35,7 +35,7 @@
    },
    {
     "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/mousescreen.v",
-    "InstLine" : 39,
+    "InstLine" : 70,
     "InstName" : "clk_div",
     "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/gowin_clkdiv/gowin_clkdiv.v",
     "ModuleLine" : 10,
@@ -43,7 +43,7 @@
    },
    {
     "InstFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/mousescreen.v",
-    "InstLine" : 74,
+    "InstLine" : 108,
     "InstName" : "hdmi_inst",
     "ModuleFile" : "C:/Users/makad/Documents/Projects/Verilog/MouseScreen/src/hdmi.v",
     "ModuleLine" : 1,
